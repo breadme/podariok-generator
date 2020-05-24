@@ -2,6 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $countGenerate int */
+/* @var $key string */
 
 use yii\helpers\Url;
 
