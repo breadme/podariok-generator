@@ -1,0 +1,792 @@
+#generator-block {
+    position: relative;
+    min-height: 450px;
+}
+
+
+#generator-gift-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#generator-title .block-size-title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#generator-title {
+    overflow: hidden;
+    background: #3e959d;
+    height: 120px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#generator-title-img {
+    position: absolute;
+    height: 120px;
+    left: 0;
+    bottom: 0;
+}
+
+.generator-btn {
+    height: calc(100% - 30px);
+    margin: 15px;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 400px;
+    width: auto !important;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    z-index: 0;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, .4), 0 0 3px rgba(0, 0, 0, .5);
+    transition: linear .1s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.generator-btn:hover {
+    height: calc(100% - 30px);
+    margin: 15px;
+    font-size: 1.8em;
+}
+
+#generator-counter {
+    height: 50px;
+    position: relative;
+    padding: 10px;
+}
+
+#generator-counter .generator-counter-element {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1), 1px 1px 3px rgba(0, 0, 0, .1);
+    margin: 4px;
+    border-radius: 10px;
+    width: inherit;
+    box-sizing: border-box;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+#generator-counter .generator-counter-element.active-green {
+    background: linear-gradient(90deg, #3c9399 6%, #32868c 92%);
+}
+
+#generator-counter .generator-counter-element.active-red {
+    background: #E36456;
+}
+
+#generator-counter .generator-counter-element.active-green:after,
+#generator-counter .generator-counter-element.active-red:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: left_counter .3s 1;
+    background: white;
+    opacity: 0;
+}
+
+.color-green.generator-btn:hover {
+    background: linear-gradient(90deg, #3c9399 6%, #32868c 92%);
+    color: white;
+    transition: all .3s;
+}
+
+.color-red.generator-btn:hover {
+    background: #ef6c5e;
+    color: white;
+    transition: all .3s;
+}
+
+#generator-counter-value {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    line-height: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+}
+
+.generator-gift {
+    animation-name: show-gift;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+    user-select: none;
+    margin-top: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.generator-info {
+    padding: 40px;
+}
+
+#generator-result .generator-result-msg {
+    margin-bottom: 15px;
+}
+
+#generator-gift-list .generator-gift .block-text, #generator-gift-list .generator-gift .block-size-title {
+    color: #333333;
+}
+
+.generator-gift .gift {
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, .4), 0 0 3px rgba(0, 0, 0, .1);
+}
+
+.generator-gift:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    display: block;
+    background: rgba(255, 255, 255, 0);
+}
+
+
+#genertor-infographics {
+    width: 100%;
+    height: 1400px;
+    position: relative;
+    background: linear-gradient(90deg, #3c9399 6%, #32868c 92%);
+    border-radius: 10px;
+}
+
+#genertor-infographics .point {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    background: white;
+    z-index: 1;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, .2);
+}
+
+#genertor-infographics .point:after {
+    content: 'i';
+    color: #3c9399;
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 50px;
+}
+
+
+#infographics-social {
+    position: absolute;
+    display: block;
+    width: auto;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+}
+
+#infographics-phone {
+    position: absolute;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, .6));
+    z-index: 1;
+}
+
+#infographics-gift-animate {
+    position: absolute;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .4));
+    animation: infographics-gift 3s infinite;
+    z-index: 1;
+    transform: rotate(0deg);
+    margin-left: 0;
+}
+
+#infographics-macbook {
+    position: absolute;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, .6));
+    z-index: 1;
+}
+
+
+.infographics-text {
+    position: absolute;
+    color: white;
+    max-width: 190px;
+    font-size: .8em;
+    text-align: left;
+    line-height: 1.2em;
+    z-index: 10;
+}
+
+.infographics-element {
+    fill: none;
+    stroke: white;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+.infographics-line {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .1));
+    z-index: 0;
+}
+
+#infographics-mobile-line {
+    width: 100%;
+    height: 100%;
+}
+
+.glass-block {
+    transform: scale(1, -1);
+}
+
+.animate-left:after {
+    background: rgba(255, 112, 99, 1) !important;
+}
+
+.animate-right:after {
+    background: rgba(60, 147, 153, 1) !important;
+}
+
+.animate-right {
+    position: absolute;
+    transform: rotate(15deg) translateX(100vw) !important;
+    opacity: 0;
+}
+
+.animate-left {
+    position: absolute;
+    transform: rotate(-15deg) translateX(-100vw) !important;
+    opacity: 0;
+}
+
+.animate-right, .animate-left {
+    transition: all .8s;
+    z-index: 999;
+}
+
+.animate-left:after, .animate-right:after {
+    transition: all .3s;
+    z-index: 999;
+}
+
+#generator-block .gift-creative {
+    position: relative;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 640px) {
+    .generator-gift {
+        margin-top: 20px;
+    }
+
+    #generator-block {
+        padding: 10px;
+    }
+
+
+    #generator-block-info:before, #generator-block-info:after {
+        height: 130px;
+        width: 130px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    #generator-block-info:after {
+        left: 0;
+    }
+
+    #generator-block-info:before {
+        right: 0;
+    }
+
+    #generator-gift-list {
+        min-height: 550px;
+    }
+
+    .animate-right, .animate-left, .animate-left:after, .animate-right:after {
+        transition: all .5s;
+    }
+
+    .animate-right {
+        margin-left: 120vw !important;
+    }
+
+    .animate-left {
+        margin-left: -120vw !important;
+
+    }
+}
+
+@media screen and (min-width: 1250px) {
+
+    #infographics-text-1 {
+        top: 110px;
+        left: 170px;
+    }
+
+    #infographics-text-2 {
+        top: 355px;
+        left: 440px;
+    }
+
+    #infographics-text-3 {
+        top: 775px;
+        right: 95px;
+    }
+
+    #infographics-text-4 {
+        top: 1220px;
+        left: 410px;
+    }
+
+    #infographics-text-5 {
+        top: 1280px;
+        right: 250px;
+    }
+
+    #infographics-text-6 {
+        top: 340px;
+        left: 1080px;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    #infographics-text-7 {
+        top: 340px;
+        left: 700px;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    #point-1 {
+        top: 50px;
+        left: 220px;
+    }
+
+    #point-2 {
+        top: 370px;
+        right: 55px;
+    }
+
+    #point-3 {
+        top: 370px;
+        right: 545px;
+    }
+
+    #point-4 {
+        top: 800px;
+        right: 305px;
+    }
+
+    #point-5 {
+        top: 1220px;
+        left: 343px;
+    }
+
+    #infographics-social {
+        top: 1332px;
+        left: 800px;
+    }
+
+    #infographics-phone {
+        width: 240px;
+        top: 120px;
+        right: 204px;
+    }
+
+    #infographics-gift-animate {
+        width: 160px;
+        top: 217px;
+        right: 245px;
+    }
+
+    #infographics-macbook {
+        width: 650px;
+        top: 550px;
+        left: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 640px) {
+
+    #generator-title .block-size-title{
+        width: calc(100% - 150px);
+        float: right;
+    }
+
+    #infographics-mobile-line {
+        max-width: 300px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .infographics-text {
+        background: #3c9399;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #genertor-infographics {
+        background: #3c9399;
+    }
+
+    .generator-btn {
+        display: none;
+        background: white;
+    }
+
+    #genertor-infographics {
+        height: 1600px;
+    }
+
+    #infographics-text-1 {
+        top: 117px;
+        left: 90px;
+    }
+
+    #infographics-text-2 {
+        top: 595px;
+        left: 90px;
+    }
+
+    #infographics-text-3 {
+        top: 825px;
+        left: 90px;
+    }
+
+    #infographics-text-4 {
+        top: 1285px;
+        left: 90px;
+    }
+
+    #infographics-text-5 {
+        top: 1455px;
+        left: 90px;
+    }
+
+    #infographics-text-6 {
+        top: 520px;
+        left: 190px;
+        text-align: center;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+        width: 75px;
+    }
+
+    #infographics-text-7 {
+        top: 520px;
+        left: 35px;
+        width: 75px;
+        text-align: center;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    #point-1 {
+        top: 50px;
+        left: 125px;
+    }
+
+    #point-2, #point-3 {
+        display: none !important;
+    }
+
+    #point-4 {
+        top: 750px;
+        left: 125px;
+    }
+
+    #point-5 {
+        top: 1370px;
+        left: 125px;
+    }
+
+    #infographics-social {
+        top: 1545px;
+        left: 90px;
+    }
+
+    #infographics-phone {
+        width: 150px;
+        top: 220px;
+        left: 75px
+    }
+
+    #infographics-gift-animate {
+        width: 95px;
+        top: 277px;
+        left: 101px;
+    }
+
+    #infographics-macbook {
+        width: 90%;
+        max-width: 360px;
+        top: 955px;
+        left: 0;
+    }
+
+}
+
+@media screen and (min-width: 930px) and (max-width: 1250px) {
+
+    #infographics-text-1 {
+        top: 110px;
+        left: 80px;
+    }
+
+    #infographics-text-2 {
+        top: 355px;
+        left: 130px;
+    }
+
+    #infographics-text-3 {
+        top: 775px;
+        right: 95px;
+    }
+
+    #infographics-text-4 {
+        top: 1220px;
+        left: 325px;
+    }
+
+    #infographics-text-5 {
+        top: 1280px;
+        right: 100px;
+    }
+
+    #infographics-text-6 {
+        top: 340px;
+        left: 770px;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    #infographics-text-7 {
+        top: 340px;
+        left: 390px;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    #point-1 {
+        top: 50px;
+        left: 80px;
+    }
+
+    #point-2 {
+        top: 370px;
+        right: 55px;
+    }
+
+    #point-3 {
+        top: 370px;
+        right: 545px;
+    }
+
+    #point-4 {
+        top: 800px;
+        right: 305px;
+    }
+
+    #point-5 {
+        top: 1220px;
+        left: 258px;
+    }
+
+    #infographics-social {
+        top: 1332px;
+        left: 640px;
+    }
+
+    #infographics-phone {
+        width: 240px;
+        top: 120px;
+        left: 485px;
+    }
+
+    #infographics-gift-animate {
+        width: 160px;
+        top: 217px;
+        left: 524px;
+    }
+
+    #infographics-macbook {
+        width: 500px;
+        top: 700px;
+        left: 0;
+    }
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 930px) {
+    .generator-btn {
+        display: none;
+    }
+
+    #genertor-infographics {
+        height: 1600px;
+    }
+
+    #infographics-text-1 {
+        top: 47px;
+        left: 350px;
+    }
+
+    #infographics-text-2 {
+        top: 435px;
+        left: 420px;
+    }
+
+    #infographics-text-3 {
+        top: 775px;
+        left: 350px;
+    }
+
+    #infographics-text-4 {
+        top: 1375px;
+        left: 350px;
+    }
+
+    #infographics-text-5 {
+        top: 1495px;
+        left: 350px;
+    }
+
+    #infographics-text-6 {
+        top: 340px;
+        left: 425px;
+        text-align: center;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+        width: 75px;
+    }
+
+    #infographics-text-7 {
+        top: 340px;
+        left: 90px;
+        width: 75px;
+        text-align: center;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    #point-1 {
+        top: 50px;
+        left: 275px;
+    }
+
+    #point-2, #point-3 {
+        display: none !important;
+    }
+
+    #point-4 {
+        top: 790px;
+        left: 275px;
+    }
+
+    #point-5 {
+        top: 1370px;
+        left: 275px;
+    }
+
+    #infographics-social {
+        top: 1545px;
+        left: 240px;
+    }
+
+    #infographics-phone {
+        width: 240px;
+        top: 220px;
+        right: 204px;
+    }
+
+    #infographics-gift-animate {
+        width: 160px;
+        top: 317px;
+        right: 245px;
+    }
+
+    #infographics-macbook {
+        width: 500px;
+        top: 900px;
+        left: 0;
+    }
+}
+
+
+@keyframes infographics-gift {
+    0%, 10% {
+        transform: rotate(-2deg) translateX(-12px);
+    }
+    50%, 60% {
+        transform: rotate(2deg) translateX(12px);
+    }
+    100% {
+        transform: rotate(-2deg) translateX(-12px);
+    }
+}
+
+
+@-webkit-keyframes show-gift {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show-gift {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes left_counter {
+    0% {
+        opacity: 1;
+        left: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 100%;
+    }
+}
+
+@keyframes left_counter {
+    0% {
+        opacity: 1;
+        left: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 100%;
+    }
+}
