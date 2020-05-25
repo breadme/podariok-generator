@@ -140,8 +140,9 @@ function handleTouchEnd() {
         if (Math.abs(resultForCheck) < sizeForCheck) {
             cleanGiftParams();
         } else {
-            hideGiftAnimate(resultForCheck);
-            checkResult(giftId, resultForCheck > 0 ? 0 : 1);
+            let resultForCheckValue = resultForCheck > 0 ? 0 : 1;
+            hideGiftAnimate(resultForCheckValue);
+            checkResult(giftId, resultForCheckValue);
         }
     }
     mouseStatus = false;
